@@ -1,31 +1,21 @@
-
 {% extends 'base.html' %}
 
 {% load bootstrap %}
 
 {% block title %}Lista Coche{% endblock title %}
 
-
-
 {% block content %}
 {{filter.form|bootstrap}}
 
-
 <div class="container">
-	
 	<ul>
 		{% for coche in filter.qs %}
-
     <li>
 
-      <a href="{% url 'coche:comentario' coche.n_bastidor %}">{{ coche.modelo }}</a>
-
+      <a href="{% url 'appOutletCar:detail' coche.n_bastidor %}">{{ coche.modelo }}</a>
     </li>
-
   {% endfor %}
 	</ul>
-	
-
 </div>
 
 
