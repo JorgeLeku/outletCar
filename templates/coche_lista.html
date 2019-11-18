@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block title %}Lista Coche{% endblock title %}
+
+
+
+{% block content %}
+
+
+
+<div class="container">
+	{{filter.form|bootstrap}}
+	<ul></ul>
+	{% for coche in coche_lista %}
+
+    <li>
+
+      <a href="{% url 'coche:comentario' coche.n_bastidor %}">{{ coche.modelo }}</a>
+
+    </li>
+
+  {% endfor %}
+
+</ul>
+
+
+
+{% endblock content %}

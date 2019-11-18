@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>outletCar</title>
+
+</head>
+<body>
+	<ul>
+		<!--<a href="{%url 'CochesAzules'%}">outletCar</a>
+		<a href="#Tipos">Tipos</a>
+		<a href="#Marcas">Marcas</a>
+		<a href="#Modelos">Modelos</a>-->		
+		{% for Coche in coche_lis %}
+		
+			<li>{{coches.color|color}}</li>
+			{% empty %}
+    		<li>No articles yet.</li>
+
+		
+		{%endfor%}
+	</ul>
+
+	<p>preusd</p>
+</body>
+</html>
