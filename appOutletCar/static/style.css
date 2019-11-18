@@ -1,0 +1,119 @@
+body {
+    background-color: #12130F;
+    color: white;
+    font-family: "Courgette", cursive;
+    padding: 5px;
+}
+
+header {
+    background: #5B2E48;
+    display: flex;
+    border-radius: 15px;
+}
+
+header a {
+    margin-top: 2.5%;
+    margin-left: 2%;
+}
+
+#logged-in-indicator {
+    right: 5%;
+    margin-top: 2.5%;
+    position: absolute;
+}
+
+#lore-link {
+    margin-left: 5%;
+}
+
+.main-container {
+    background-color: #585563;
+    border-radius: 15px;
+    padding-left: 2%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 10px;
+}
+
+.post {
+    background-color: #9dbacf;
+    color: black;
+    border-radius: 15px;
+    padding: 10px;
+    margin-right: 2%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.post-position {
+    text-align: right;
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+#logo {
+    margin-left: 2%;
+}
+
+#threads-table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#threads-table th {
+    text-align: left;
+}
+
+#house-content {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+#house-center-div, #house-right-div {
+    margin-left: 15%;
+    width: 15%;
+}
+
+#house-left-div {
+    text-align: center;
+}
+
+#character-content {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+#character-center-div, #character-right-div, #character-appearances-div {
+    width: 23%;
+}
+
+#character-left-div img {
+    border-radius: 15px;
+}
+
+#episode-content {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+#episode-center-div, #episode-right-div {
+    width: 25%;
+    margin-left: 5%;
+}
+
+#episode-left-div img {
+    border-radius: 15px;
+}
+
+#lore-cover-content {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+#lore-cover-season {
+    margin-left: 5%;
+}

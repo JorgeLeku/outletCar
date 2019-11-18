@@ -46,7 +46,7 @@ class Coche(models.Model):
     cambio = models.CharField(max_length=100)
     consumo = models.FloatField()
     comentario = models.CharField(max_length=1000)
-    fotoCoche = models.ImageField(upload_to='media/imagenesC/', default='media/imagenesC/None/no-img.jpg')
+    fotoCoche = models.ImageField(upload_to='images/', default='images/None/no-img.jpg')
     modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE)
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=200, unique=True, default='a')

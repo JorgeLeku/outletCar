@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from appOutletCar import views
+#handler404 = views.handler404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('appOutletCar/', include('appOutletCar.urls')),

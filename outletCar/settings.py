@@ -26,6 +26,10 @@ SECRET_KEY = 'ha4oqj^-!^yeuje9t@oltir+^jrcrrpgk&1=7!xxw9txy#c^_6'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.2/howto/static-files/ 
+#STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
