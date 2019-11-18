@@ -1,0 +1,15 @@
+ @charset "UTF-8";
+ body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-image: url("http://speedhunters-wp-production.s3.amazonaws.com/wp-content/uploads/2017/05/05044609/IATSH_69A3684e_SH-1200x800.jpg");
+        background-repeat: no-repeat;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
