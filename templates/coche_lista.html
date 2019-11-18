@@ -1,18 +1,18 @@
 
 {% extends 'base.html' %}
 
-
+{% load bootstrap %}
 
 {% block title %}Lista Coche{% endblock title %}
 
 
 
 {% block content %}
-
+{{filter.form|bootstrap}}
 
 
 <div class="container">
-	{{filter.form|bootstrap}}
+	
 	<ul>
 		{% for coche in filter.qs %}
 
