@@ -51,8 +51,11 @@ class Coche(models.Model):
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
 
     def __str__(self):
-        
         return self.n_bastidor
+
+    def body_preview(self):
+        return self.body[:50]
+
 
 class Usuario(models.Model):
     correo = models.CharField(max_length=100, null=False, primary_key=True)

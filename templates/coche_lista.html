@@ -5,14 +5,18 @@
 {% block title %}Lista Coche{% endblock title %}
 
 {% block content %}
-{{filter.form|bootstrap}}
+
 
 <div class="container">
+	<form method="GET">
+		{{filter.form|bootstrap}}
+		<button type="submit" class="btn btn-primary">Buscar</button>
+	</form>
 	<ul>
 		{% for coche in filter.qs %}
     <li>
 
-      <a href="{% url 'appOutletCar:detail' coche.n_bastidor %}">{{ coche.modelo }}</a>
+      <a href="{% url 'appOutletCar:detail' coche.n_bastidor %}">{{ coche.n_bastidor }}</a>
     </li>
   {% endfor %}
 	</ul>
