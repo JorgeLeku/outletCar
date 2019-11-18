@@ -1,13 +1,16 @@
-{% block content %}
+{%extends 'base.html'%}{% block content %}
 {%load static%}
 {% load crispy_forms_tags %}
 {% block title %}Detalle Coche{% endblock title %}
+<link rel="stylesheet" href="{% static 'styleab.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
 <div class="container">
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 left  top ">
       <div class="card-body">
       	<h1>{% block modelo %} {{ coche.modelo.marca }}|{{coche.modelo}} {% endblock modelo %}</h1>
-        <p class=" text-muted">{{ coche.precio }}</p>
+        <p class=" text-muted">{{ coche.precio }} €</p>
         <img src="{{ coche.fotoCoche.url }}">
         <p class="card-text ">{{ coche.comentario | safe }}</p>
       </div>
@@ -44,7 +47,7 @@
         </div>
         {% else %}
         <h3>Leave a comment</h3>
-        <form method="post" style="margin-top: 1.3em;">
+        <form method="coche" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}
           <button type="submit" class="btn btn-primary  btn-lg">Submit</button>

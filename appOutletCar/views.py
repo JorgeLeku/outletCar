@@ -24,8 +24,8 @@ def DetailViewCoches(request, slug):
     comments = coche.comments.filter(active=True)
     new_comment = None
     # Comment posted
-    if request.method == 'COCHE':
-        comment_form = CommentForm(data=request.COCHE)
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
 
             # Create Comment object but don't save to database yet
