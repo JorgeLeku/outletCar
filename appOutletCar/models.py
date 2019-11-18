@@ -46,10 +46,10 @@ class Coche(models.Model):
     cambio = models.CharField(max_length=100)
     consumo = models.FloatField()
     comentario = models.CharField(max_length=1000)
-    fotoCoche = models.ImageField(upload_to='imagenesC/', default='ImagenesC/None/no-img.jpg')
+    fotoCoche = models.ImageField(upload_to='media/imagenesC/', default='media/imagenesC/None/no-img.jpg')
     modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE)
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
-
+    slug = models.SlugField(max_length=200, unique=True, default='a')
     def __str__(self):
         return self.n_bastidor
 
@@ -68,3 +68,18 @@ class Usuario(models.Model):
     def __str__(self):
 
         return self.correo
+
+
+class Comment(models.Model):
+    coche = models.ForeignKey(Coche,on_delete=models.CASCADE,related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return 'Comment {} by {}'.format(self.body, self.name)

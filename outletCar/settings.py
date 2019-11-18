@@ -26,7 +26,8 @@ SECRET_KEY = 'ha4oqj^-!^yeuje9t@oltir+^jrcrrpgk&1=7!xxw9txy#c^_6'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 # Application definition
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'appOutletCar',
     'django_filters',
     'bootstrapform',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

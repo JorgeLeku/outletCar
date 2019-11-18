@@ -1,27 +1,21 @@
-{% block content %}
-{% load crispy_forms_tags %}
-{% block title %}Detalle Coche{% endblock title %}
+{% extends 'base.html' %} {% block content %}
+
 <div class="container">
   <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top ">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
       <div class="card-body">
-      	<h1>{% block modelo %} {{ coche.modelo.marca }}|{{coche.modelo}} {% endblock modelo %}</h1>
+        <h1>{% block title %} {{ coche.marca }}|{{coche.modelo}} {% endblock title %}</h1>
         <p class=" text-muted">{{ coche.precio }}</p>
-        <img src="{{ coche.fotoCoche.url }}">
         <p class="card-text ">{{ coche.comentario | safe }}</p>
       </div>
     </div>
 
-<div class="col-md-8 card mb-4  mt-3 ">
+    <div class="col-md-8 card mb-4  mt-3 ">
       <div class="card-body">
         <!-- comments -->
-        {% with comments.count as total_comments %}
-        <h2>{{ total_comments }} comments</h2>
+        <h2>{{ comments.count }} comments</h2>
 
-        <p>
-          {% endwith %} {% for comment in comments %}
-        </p>
-
+        {% for comment in comments %}
         <div class="comments" style="padding: 10px;">
           <p class="font-weight-bold">
             {{ comment.name }}
@@ -31,7 +25,6 @@
           </p>
           {{ comment.body | linebreaks }}
         </div>
-
         {% endfor %}
       </div>
     </div>
@@ -43,8 +36,8 @@
         </div>
         {% else %}
         <h3>Leave a comment</h3>
-        <form method="post" style="margin-top: 1.3em;">
-          {{ comment_form | crispy }}
+        <form method="coche" style="margin-top: 1.3em;">
+          {{ comment_form.as_p }}
           {% csrf_token %}
           <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
         </form>
@@ -53,7 +46,4 @@
     </div>
   </div>
 </div>
-
-
-
 {% endblock content %}
