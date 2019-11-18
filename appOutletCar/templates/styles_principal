@@ -1,4 +1,3 @@
-<style>
 * {
   box-sizing: border-box;
 }
@@ -131,5 +130,3 @@ figcaption {
   word-wrap:normal;
   text-align: left;
 }
-
-</style>
