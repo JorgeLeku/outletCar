@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="styles_about_us" type="text/css" href="styles_about_us.css">
+
 <style>
 * {
   box-sizing: border-box;
@@ -17,9 +19,9 @@ body {
 
 /* Header/logo Title */
 .header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
+  padding: 10px;
+  text-align: left;
+  background: darkslategrey;
   color: white;
 }
 
@@ -55,18 +57,18 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: lightgrey;
   color: black;
 }
 
 /* Active/current link */
 .navbar a.active {
-  background-color: #666;
+  background-color: #333;
   color: white;
 }
 
 /* Column container */
-.row {  
+.row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
@@ -83,10 +85,10 @@ body {
 }
 
 /* Main column */
-.main {   
+.main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
-  background-color: white;
+  background-color: ;
   padding: 20px;
 }
 
@@ -106,7 +108,7 @@ body {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
@@ -118,32 +120,57 @@ body {
     width: 100%;
   }
 }
+
+figure {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+figcaption {
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:  10px;
+  font-weight: 400;
+  border: none;
+  background: transparent;
+  word-wrap:normal;
+  text-align: left;
+}
+
 </style>
+
 </head>
 <body>
 
 <div class="header">
   <h1>Outlet Car</h1>
-  <p>Web de <b>ventas</b> de coches.</p>
+  <p>Especialistas en <b>ventas</b> de coches.</p>
 </div>
 
 <div class="navbar">
-  <a href="#" class="active">Inicio</a>
-  <a href="#">OTRO??? OJO PARA CAMBIAR!</a>
+   <a href="principal.html" >Inicio</a>
+  <a href="#">Información</a>
+  <a href="about_us.html"class="active" >About us</a>
 </div>
   <div class="main">
-    <h2>Sobre nosotros</h2>
-    <h5>Somos una web que anuncia coches en venta.</h5>
+    <h1>About Us </h1>
+    <br />
+    <h2>Somos una web que anuncia coches en venta.</h2>
     <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
-    <img src="../media/ctc.png"
-    height="200">
-    <p>Aitor Bonilla y Eduardo Rodriguez.</p>
+    <figure>
+        <img src="../media/ctc.png" height="200">
+        <figcaption>Aitor Bonilla y Eduardo Rodriguez.</figcaption>
+    </figure>
     <p>Estos son dos de nuestros muchos grandes empleados.</p>
     <br>
-    <h5>La gran importancia del cliente para nosotros.</h5>
-    <img src="../media/ctc2.png"
-    height="200">
-    <p>Uno de nuestros clientes, bien satisfecho.</p>
+    <h2>La gran importancia del cliente para nosotros.</h2>
+    <figure>
+        <img src="../media/ctc2.png" height="200">
+        <figcaption>Uno de nuestros clientes, bien satisfecho.</figcaption>
+    </figure>
     <p>Para nosotros los clientes son muy importantes, por eso repartimos un cuestionario con cada venta de coche para saber qué les ha parecido el trato.</p>
   </div>
 </div>
@@ -152,7 +179,7 @@ body {
               <p class="m-0 text-dark text-center "
               align="center">
               Copyright &copy; BM Romo</p>
-    </footer>
+</footer>
 
 </body>
 </html>
