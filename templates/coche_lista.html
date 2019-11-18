@@ -13,8 +13,8 @@
 
 <div class="container">
 	{{filter.form|bootstrap}}
-	<ul></ul>
-	{% for coche in coche_lista %}
+	<ul>
+		{% for coche in filter.qs %}
 
     <li>
 
@@ -23,8 +23,10 @@
     </li>
 
   {% endfor %}
+	</ul>
+	
 
-</ul>
+</div>
 
 
 
